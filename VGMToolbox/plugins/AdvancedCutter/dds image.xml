@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<OffsetFinderTemplate>
+	<Header>
+		<!-- 
+        <FormatName> 用于指定文件格式的名称,这里为 "DirectDraw Surface (DDS)".
+        对于DDS格式,当前 <SearchString> 设置为文件起始特征字符串,
+        文件终止字符串与 <SearchString> 一致,均为444453207C000000",
+        在终止字符串输入框中输入该值,并设置为16进制.
+        -->
+		<FormatName>DDS image</FormatName>
+		<Author />
+	</Header>
+	<SearchParameters>
+		<SearchString>444453207C000000</SearchString>
+		<TreatSearchStringAsHex>true</TreatSearchStringAsHex>
+		<StartingOffset />
+		<UseModOffsetForSearchString>false</UseModOffsetForSearchString>
+		<SearchStringOffset>0</SearchStringOffset>
+		<OutputFileExtension>.dds</OutputFileExtension>
+		<MinimumSizeForCutting />
+		<CutParameters>
+			<CutStyle>offset</CutStyle>
+			<CutSizeAtOffset>4</CutSizeAtOffset>
+			<CutSizeOffsetSize>4</CutSizeOffsetSize>
+			<CutSizeOffsetEndianess>little</CutSizeOffsetEndianess>
+		</CutParameters>
+		<AddExtraBytes>false</AddExtraBytes>
+		<AddExtraByteSize />
+	</SearchParameters>
+</OffsetFinderTemplate>

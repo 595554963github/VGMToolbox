@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<OffsetFinderTemplate xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<Header>
+		<!-- 
+        <FormatName> 用于指定文件格式的名称,这里为 "Portable Network Graphics (PNG)".
+        对于PNG格式,其文件起始序列为 89504E47',已在 <SearchString> 中设置,
+        需在终止字符串输入框中再次输入该值,并设置为16进制.这样它会正确的切割.
+        -->
+		<FormatName>PNG image</FormatName>
+		<Author />
+	</Header>
+	<SearchParameters>
+		<SearchString>89504E47</SearchString>
+		<TreatSearchStringAsHex>true</TreatSearchStringAsHex>
+		<StartingOffset />
+		<UseModOffsetForSearchString>false</UseModOffsetForSearchString>
+		<SearchStringOffset>0</SearchStringOffset>
+		<OutputFileExtension>.png</OutputFileExtension>
+		<MinimumSizeForCutting />
+		<CutParameters>
+			<CutStyle>offset</CutStyle>
+			<CutSizeAtOffset>4</CutSizeAtOffset>
+			<CutSizeOffsetSize>4</CutSizeOffsetSize>
+			<CutSizeOffsetEndianess>little</CutSizeOffsetEndianess>
+		</CutParameters>
+		<AddExtraBytes>false</AddExtraBytes>
+		<AddExtraByteSize />
+	</SearchParameters>
+</OffsetFinderTemplate>

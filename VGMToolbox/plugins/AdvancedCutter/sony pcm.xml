@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<OffsetFinderTemplate>
+	<Header>
+		<!-- 
+        <FormatName> 用于指定音频格式的名称,这里是 "sony games pcm audio".
+        对于PCM格式,其文件头为14个00,在本XML文件的 <SearchString> 中已设置.
+        文件尾为 "00077777777777777777777777777777",
+        若要在相关工具中使用此配置,可在终止字符串输入框中输入该值,并设置为16进制.
+        -->
+		<FormatName>sony games pcm audio</FormatName>
+		<Author />
+	</Header>
+	<SearchParameters>
+		<SearchString>00000000000000000000000000000000</SearchString>
+		<TreatSearchStringAsHex>true</TreatSearchStringAsHex>
+		<StartingOffset />
+		<UseModOffsetForSearchString>false</UseModOffsetForSearchString>
+		<SearchStringOffset>0</SearchStringOffset>
+		<OutputFileExtension>.pcm</OutputFileExtension>
+		<MinimumSizeForCutting />
+		<CutParameters>
+			<CutStyle>offset</CutStyle>
+			<CutSizeAtOffset>4</CutSizeAtOffset>
+			<CutSizeOffsetSize>4</CutSizeOffsetSize>
+			<CutSizeOffsetEndianess>little</CutSizeOffsetEndianess>
+		</CutParameters>
+		<AddExtraBytes>false</AddExtraBytes>
+		<AddExtraByteSize />
+	</SearchParameters>
+</OffsetFinderTemplate>

@@ -1,0 +1,15 @@
+<Project>
+  <PropertyGroup>
+    <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
+    <CentralPackageTransitivePinningEnabled>true</CentralPackageTransitivePinningEnabled>
+    <NoWarn>$(NoWarn);NU1507</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageVersion Include="EntityFramework" Version="6.4.4" />
+    <PackageVersion Include="Stub.System.Data.SQLite.Core.NetFramework" Version="1.0.119.0" />
+    <PackageVersion Include="System.Data.SQLite" Version="1.0.119.0" />
+    <PackageVersion Include="System.Data.SQLite.Core" Version="1.0.119.0" />
+    <PackageVersion Include="System.Data.SQLite.EF6" Version="1.0.119.0" />
+    <PackageVersion Include="System.Data.SQLite.Linq" Version="1.0.119.0" />
+  </ItemGroup>
+</Project>
