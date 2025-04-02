@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.ComponentModel;
 using System.IO;
 
@@ -41,28 +41,28 @@ namespace VGMToolbox.tools.stream
 
             switch (demuxStruct.SourceFormat)
             {
-                case "ASF (MS Advanced Systems Format)":
-                case "WMV (MS Advanced Systems Format)":
+                case "ASF (MS高级系统格式)":
+                case "WMV (MS高级系统格式)":
                     MicrosoftAsfContainer asfStream = new MicrosoftAsfContainer(path);
                     asfStream.DemultiplexStreams(demuxOptions);
                     break;
-                case "BIK (Bink Video Container)":
+                case "BIK (Bink视频容器)":
                     BinkStream binkStream = new BinkStream(path);
                     binkStream.DemultiplexStreams(demuxOptions);
                     break;
-                case "DSI (Racjin/Racdym PS2 Video)":
+                case "DSI (Racjin/Racdym PS2视频)":
                     RacjinDsiStream dsiStream = new RacjinDsiStream(path);
                     dsiStream.DemultiplexStreams(demuxOptions);
                     break;
-                case "DVD Video (VOB)":
+                case "DVD (VOB视频)":
                     DvdVideoStream dvdStream = new DvdVideoStream(path);
                     dvdStream.DemultiplexStreams(demuxOptions);
                     break;
-                case "Electronic Arts VP6 (VP6)":
+                case "VP6 (On2 Technologies开发的VP6)":
                     ElectronicArtsVp6Stream vp6Stream = new ElectronicArtsVp6Stream(path);
                     vp6Stream.DemultiplexStreams(demuxOptions);
                     break;
-                case "Electronic Arts MPC (MPC)":
+                case "MPC (Gabest开发的MPC)":
                     ElectronicArtsMpcStream mpcStream = new ElectronicArtsMpcStream(path);
                     mpcStream.DemultiplexStreams(demuxOptions);
                     break;
@@ -70,7 +70,7 @@ namespace VGMToolbox.tools.stream
                     HudsonHvqm4VideoStream hvqmStream = new HudsonHvqm4VideoStream(path);
                     hvqmStream.DemultiplexStreams(demuxOptions);
                     break;
-                case "MO (Mobiclip)":
+                case "MO (Actimagine Corp Mobiclip)":
                     MobiclipStream.MovieType movieType = MobiclipStream.GetMobiclipStreamType(path);
 
                     switch (movieType)
@@ -105,32 +105,32 @@ namespace VGMToolbox.tools.stream
                             throw new FormatException(String.Format("不支持的MPEG类型,用于文件: {0}", Path.GetFileName(path)));
                     }
                     break;
-                case "MPS (PSP UMD Movie)":
+                case "MPS (PSP UMD电影)":
                     SonyPspMpsStream mpsStream = new SonyPspMpsStream(path);
                     mpsStream.DemultiplexStreams(demuxOptions);
                     break;
 
-                case "PAM (PlayStation Advanced Movie)":
+                case "PAM (PlayStation高级电影)":
                     SonyPamStream pamStream = new SonyPamStream(path);
                     pamStream.DemultiplexStreams(demuxOptions);
                     break;
 
-                case "PMF (PSP Movie Format)":
+                case "PMF (PSP电影格式)":
                     SonyPmfStream pmfStream = new SonyPmfStream(path);
                     pmfStream.DemultiplexStreams(demuxOptions);
                     break;
 
-                case "PSS (PlayStation Stream)":
+                case "PSS (PlayStation流媒体)":
                     SonyPssStream sps = new SonyPssStream(path);
                     sps.DemultiplexStreams(demuxOptions);
                     break;
 
-                case "SFD (CRI Sofdec Video)":
+                case "SFD (CRI Sofdec视频)":
                     SofdecStream ss = new SofdecStream(path);
                     ss.DemultiplexStreams(demuxOptions);
                     break;
 
-                case "THP":
+                case "THP (Expansive Worlds开发)":
                     NintendoThpMovieStream thp = new NintendoThpMovieStream(path);
                     thp.DemultiplexStreams(demuxOptions);
                     break;
@@ -139,7 +139,7 @@ namespace VGMToolbox.tools.stream
                     cus.DemultiplexStreams(demuxOptions);
                     break;
 
-                case "XMV (Xbox Media Video)":
+                case "XMV (Xbox媒体视频)":
                     XmvStream xmv = new XmvStream(path);
                     xmv.DemultiplexStreams(demuxOptions);
                     break;
