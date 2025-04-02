@@ -1,132 +1,151 @@
-﻿using static System.Net.Mime.MediaTypeNames;
-using System.ComponentModel;
-using System.Drawing.Printing;
-using System.Drawing;
-using System.Windows.Forms;
-using System;
-using VGMToolbox.forms;
-
-namespace YourNamespace // 请替换为实际的命名空间
+namespace VGMToolbox.forms
 {
-    public partial class AboutForm : Form
+    partial class AboutForm
     {
-        public AboutForm()
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
         {
-            InitializeComponent();
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
         }
 
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
         private void InitializeComponent()
         {
-            ComponentResourceManager manager = new ComponentResourceManager(typeof(AboutForm));
-            LinkLabel linkLabelHomePage = new LinkLabel();
-            Button okButton = new Button();
-            TextBox tbMain = new TextBox();
-            LinkLabel linkLabelSupport = new LinkLabel();
-            Label label1 = new Label();
-            Label label2 = new Label();
-            LinkLabel linkLabelGithub = new LinkLabel();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AboutForm));
+            this.linkLabelHomePage = new System.Windows.Forms.LinkLabel();
+            this.okButton = new System.Windows.Forms.Button();
+            this.tbMain = new System.Windows.Forms.TextBox();
+            this.linkLabelSupport = new System.Windows.Forms.LinkLabel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.linkLabelGithub = new System.Windows.Forms.LinkLabel();
+            this.SuspendLayout();
+            // 
+            // linkLabelHomePage
+            // 
+            this.linkLabelHomePage.AutoSize = true;
+            this.linkLabelHomePage.Location = new System.Drawing.Point(14, 220);
+            this.linkLabelHomePage.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.linkLabelHomePage.Name = "linkLabelHomePage";
+            this.linkLabelHomePage.Size = new System.Drawing.Size(89, 18);
+            this.linkLabelHomePage.TabIndex = 2;
+            this.linkLabelHomePage.TabStop = true;
+            this.linkLabelHomePage.Text = "主页";
+            this.linkLabelHomePage.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel_LinkClicked);
+            // 
+            // okButton
+            // 
+            this.okButton.Location = new System.Drawing.Point(153, 327);
+            this.okButton.Margin = new System.Windows.Forms.Padding(4);
+            this.okButton.Name = "okButton";
+            this.okButton.Size = new System.Drawing.Size(112, 32);
+            this.okButton.TabIndex = 0;
+            this.okButton.Text = "关闭";
+            this.okButton.UseVisualStyleBackColor = true;
+            this.okButton.Click += new System.EventHandler(this.okButton_Click);
+            // 
+            // tbMain
+            // 
+            this.tbMain.AcceptsReturn = true;
+            this.tbMain.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.tbMain.Location = new System.Drawing.Point(18, 17);
+            this.tbMain.Margin = new System.Windows.Forms.Padding(4);
+            this.tbMain.Multiline = true;
+            this.tbMain.Name = "tbMain";
+            this.tbMain.ReadOnly = true;
+            this.tbMain.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.tbMain.Size = new System.Drawing.Size(388, 155);
+            this.tbMain.TabIndex = 1;
+            this.tbMain.Text = resources.GetString("tbMain.Text");
+            // 
+            // linkLabelSupport
+            // 
+            this.linkLabelSupport.AutoSize = true;
+            this.linkLabelSupport.Location = new System.Drawing.Point(14, 245);
+            this.linkLabelSupport.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.linkLabelSupport.Name = "linkLabelSupport";
+            this.linkLabelSupport.Size = new System.Drawing.Size(161, 18);
+            this.linkLabelSupport.TabIndex = 3;
+            this.linkLabelSupport.TabStop = true;
+            this.linkLabelSupport.Text = "支持/问题";
+            this.linkLabelSupport.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel_LinkClicked);
+            // 
+            // label1
+            // 
+            this.label1.Location = new System.Drawing.Point(14, 177);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(390, 43);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "VGMToolbox是免费软件，在MIT协议下获得许可.";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(14, 270);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(251, 18);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "Email:vgmtoolbox@gmail.com";
+            // 
+            // linkLabelGithub
+            // 
+            this.linkLabelGithub.AutoSize = true;
+            this.linkLabelGithub.Location = new System.Drawing.Point(14, 295);
+            this.linkLabelGithub.Name = "linkLabelGithub";
+            this.linkLabelGithub.Size = new System.Drawing.Size(197, 18);
+            this.linkLabelGithub.TabIndex = 6;
+            this.linkLabelGithub.TabStop = true;
+            this.linkLabelGithub.Text = "Github上的Rev更新";
+            this.linkLabelGithub.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel_LinkClicked);
+            // 
+            // AboutForm
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(426, 372);
+            this.Controls.Add(this.linkLabelGithub);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.linkLabelSupport);
+            this.Controls.Add(this.tbMain);
+            this.Controls.Add(this.okButton);
+            this.Controls.Add(this.linkLabelHomePage);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Name = "AboutForm";
+            this.Text = "关于VGMToolbox";
+            this.ResumeLayout(false);
+            this.PerformLayout();
 
-            SuspendLayout();
-
-            // linkLabelHomePage 属性设置
-            linkLabelHomePage.AutoSize = true;
-            linkLabelHomePage.Location = new Point(14, 220);
-            linkLabelHomePage.Margin = new Padding(4, 0, 4, 0);
-            linkLabelHomePage.Name = "linkLabelHomePage";
-            linkLabelHomePage.Size = new Size(89, 18);
-            linkLabelHomePage.TabIndex = 2;
-            linkLabelHomePage.TabStop = true;
-            linkLabelHomePage.Text = "主页";
-            linkLabelHomePage.LinkClicked += new LinkLabelLinkClickedEventHandler(linkLabel_LinkClicked);
-
-            // okButton 属性设置
-            okButton.Location = new Point(153, 327);
-            okButton.Margin = new Padding(4);
-            okButton.Name = "okButton";
-            okButton.Size = new Size(112, 32);
-            okButton.TabIndex = 0;
-            okButton.Text = "关闭";
-            okButton.UseVisualStyleBackColor = true;
-            okButton.Click += new EventHandler(okButton_Click);
-
-            // tbMain 属性设置
-            tbMain.AcceptsReturn = true;
-            tbMain.BackColor = SystemColors.ControlLightLight;
-            tbMain.Location = new Point(18, 17);
-            tbMain.Margin = new Padding(4);
-            tbMain.Multiline = true;
-            tbMain.Name = "tbMain";
-            tbMain.ReadOnly = true;
-            tbMain.ScrollBars = ScrollBars.Vertical;
-            tbMain.Size = new Size(428, 155);
-            tbMain.TabIndex = 1;
-            tbMain.Text = manager.GetString("tbMain.Text");
-
-            // linkLabelSupport 属性设置
-            linkLabelSupport.AutoSize = true;
-            linkLabelSupport.Location = new Point(14, 245);
-            linkLabelSupport.Margin = new Padding(4, 0, 4, 0);
-            linkLabelSupport.Name = "linkLabelSupport";
-            linkLabelSupport.Size = new Size(161, 18);
-            linkLabelSupport.TabIndex = 3;
-            linkLabelSupport.TabStop = true;
-            linkLabelSupport.Text = "支持/问题咨询";
-            linkLabelSupport.LinkClicked += new LinkLabelLinkClickedEventHandler(linkLabel_LinkClicked);
-
-            // label1 属性设置
-            label1.Location = new Point(14, 177);
-            label1.Margin = new Padding(4, 0, 4, 0);
-            label1.Name = "label1";
-            label1.Size = new Size(390, 43);
-            label1.TabIndex = 4;
-            label1.Text = "VGMToolbox 是免费软件,采用 MIT 许可证授权.";
-
-            // label2 属性设置
-            label2.AutoSize = true;
-            label2.Location = new Point(14, 270);
-            label2.Margin = new Padding(4, 0, 4, 0);
-            label2.Name = "label2";
-            label2.Size = new Size(251, 18);
-            label2.TabIndex = 5;
-            label2.Text = "邮箱: vgmtoolbox@gmail.com";
-
-            // linkLabelGithub 属性设置
-            linkLabelGithub.AutoSize = true;
-            linkLabelGithub.Location = new Point(14, 307);
-            linkLabelGithub.Name = "linkLabelGithub";
-            linkLabelGithub.Size = new Size(197, 18);
-            linkLabelGithub.TabIndex = 6;
-            linkLabelGithub.TabStop = true;
-            linkLabelGithub.Text = "在 Github 上查看版本更新";
-            linkLabelGithub.LinkClicked += new LinkLabelLinkClickedEventHandler(linkLabel_LinkClicked);
-
-            AutoScaleDimensions = new SizeF(9f, 18f);
-            AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            ClientSize = new Size(464, 371);
-            Controls.Add(linkLabelGithub);
-            Controls.Add(label2);
-            Controls.Add(label1);
-            Controls.Add(linkLabelSupport);
-            Controls.Add(tbMain);
-            Controls.Add(okButton);
-            Controls.Add(linkLabelHomePage);
-            FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            Margin = new Padding(4);
-            Name = "AboutForm";
-            Text = "关于 VGMToolbox";
-            ResumeLayout(false);
-            PerformLayout();
         }
 
-        private void linkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            LinkLabel link = (LinkLabel)sender;
-            System.Diagnostics.Process.Start(link.Text);
-        }
+        #endregion
 
-        private void okButton_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
+        private System.Windows.Forms.LinkLabel linkLabelHomePage;
+        private System.Windows.Forms.Button okButton;
+        private System.Windows.Forms.TextBox tbMain;
+        private System.Windows.Forms.LinkLabel linkLabelSupport;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.LinkLabel linkLabelGithub;
     }
 }
