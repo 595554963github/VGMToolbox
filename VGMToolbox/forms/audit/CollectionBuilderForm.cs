@@ -23,9 +23,9 @@ namespace VGMToolbox.forms.audit
 
         private void loadSystemList()
         {
-            this.comboBox1.DataSource = SqlLiteUtil.GetSimpleDataTable(DB_PATH, "系统", "系统名称");
-            this.comboBox1.DisplayMember = "系统名称";
-            this.comboBox1.ValueMember = "系统ID";
+            this.comboBox1.DataSource = SqlLiteUtil.GetSimpleDataTable(DB_PATH, "SYSTEMS", "SystemName");
+            this.comboBox1.DisplayMember = "SystemName";
+            this.comboBox1.ValueMember = "SystemId";
         }
     }
 }
