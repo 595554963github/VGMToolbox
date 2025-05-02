@@ -106,7 +106,6 @@
   <ItemGroup>
     <Content Include="VGMToolbox\plugin\Plugin Specs.txt" />
     <None Include="App.config" />
-    <None Include="packages.config" />
     <None Include="VGMToolbox\resources\gears.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
