@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<OffsetFinderTemplate xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <Header>
+        <FormatName>PNG Image</FormatName>
+        <Author>XSD-compliant terminator config</Author>
+    </Header>
+    <SearchParameters>
+        <SearchString>89504E47</SearchString>
+        <TreatSearchStringAsHex>true</TreatSearchStringAsHex>
+        <StartingOffset>0</StartingOffset>
+        <UseModOffsetForSearchString>false</UseModOffsetForSearchString>
+        <SearchStringOffset>0</SearchStringOffset>
+        <OutputFileExtension>.png</OutputFileExtension>
+        <CutParameters>
+            <CutStyle>terminator</CutStyle>
+            <TerminatorString>49454E44AE426082</TerminatorString>
+            <TreatTerminatorStringAsHex>true</TreatTerminatorStringAsHex>
+            <IncludeTerminatorInSize>true</IncludeTerminatorInSize>
+            <CutSizeAtOffset>0</CutSizeAtOffset>
+            <CutSizeOffsetSize>0</CutSizeOffsetSize>
+            <CutSizeOffsetEndianess>big</CutSizeOffsetEndianess>
+        </CutParameters>
+        <AddExtraBytes>false</AddExtraBytes>
+        <AddExtraByteSize>0</AddExtraByteSize>
+    </SearchParameters>
+</OffsetFinderTemplate>

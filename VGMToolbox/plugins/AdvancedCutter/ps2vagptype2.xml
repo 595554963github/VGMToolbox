@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<OffsetFinderTemplate>
+  <Header>
+    <FormatName>PlayStation 2 - VAGp Streams Type 2</FormatName>
+    <Author>bxaimc</Author>
+  </Header>
+  <SearchParameters>
+    <SearchString>56414770</SearchString>
+    <TreatSearchStringAsHex>true</TreatSearchStringAsHex>
+    <SearchStringOffset>0</SearchStringOffset>
+    <OutputFileExtension>.vag</OutputFileExtension>
+    <CutParameters>
+      <CutStyle>offset</CutStyle>
+      <CutSizeAtOffset>0x0c</CutSizeAtOffset>
+      <CutSizeOffsetSize>4</CutSizeOffsetSize>
+      <CutSizeOffsetEndianess>big</CutSizeOffsetEndianess>      
+    </CutParameters>
+    <AddExtraBytes>true</AddExtraBytes>
+    <AddExtraByteSize>96</AddExtraByteSize>    
+  </SearchParameters>
+</OffsetFinderTemplate>
