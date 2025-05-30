@@ -1,29 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <OffsetFinderTemplate xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Header>
-  	<!-- 
-        <FormatName> 用于指定unity格式的名称,这里是 "unity'file".
-        对于unity游戏,其文件头为556E6974794653,在本XML文件的 <SearchString> 中已设置.
-        选择终止字符串,再次输入556E6974794653,勾选视为16进制,把文件拖上去就可以了.
-        -->
-    <FormatName>Unity games</FormatName>
-    <Author />
+    <FormatName>Unity Asset File</FormatName>
+    <Author>Modified based on Unity.bt template</Author>
   </Header>
   <SearchParameters>
     <SearchString>556E6974794653</SearchString>
     <TreatSearchStringAsHex>true</TreatSearchStringAsHex>
-    <StartingOffset />
+    <StartingOffset>0</StartingOffset>
     <UseModOffsetForSearchString>false</UseModOffsetForSearchString>
     <SearchStringOffset>0</SearchStringOffset>
-    <OutputFileExtension>.bundle</OutputFileExtension>
-    <MinimumSizeForCutting />
+    <OutputFileExtension>.asset</OutputFileExtension>
+    <MinimumSizeForCutting>16</MinimumSizeForCutting>
     <CutParameters>
-      <CutStyle>offset</CutStyle>
-      <CutSizeAtOffset>4</CutSizeAtOffset>
-      <CutSizeOffsetSize>4</CutSizeOffsetSize>
+      <CutStyle>terminator</CutStyle>
+      <TerminatorString>556E6974794653</TerminatorString>
+      <TreatTerminatorStringAsHex>true</TreatTerminatorStringAsHex>
+      <IncludeTerminatorInSize>false</IncludeTerminatorInSize>
+      <CutSizeAtOffset>0</CutSizeAtOffset>
+      <CutSizeOffsetSize>0</CutSizeOffsetSize>
       <CutSizeOffsetEndianess>little</CutSizeOffsetEndianess>
     </CutParameters>
     <AddExtraBytes>false</AddExtraBytes>
-    <AddExtraByteSize />
   </SearchParameters>
 </OffsetFinderTemplate>
