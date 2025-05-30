@@ -1,28 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
-<OffsetFinderTemplate>
-  <Header><!-- 
-        <FormatName> 用于指定fsb格式的名称,这里是 Fmod fsb file".
-        fsb其文件头为46534235,在本XML文件的 <SearchString> 中已设置.
-        选择终止字符串,再次输入勾选46534235,视为16进制,把文件拖上去就可以了.
-        -->
-    <FormatName>Fmod fsb</FormatName>
-    <Author />
-  </Header>
-  <SearchParameters>
-    <SearchString>46534235</SearchString>
-    <TreatSearchStringAsHex>true</TreatSearchStringAsHex>
-    <StartingOffset />
-    <UseModOffsetForSearchString>false</UseModOffsetForSearchString>
-    <SearchStringOffset>0</SearchStringOffset>
-    <OutputFileExtension>.fsb</OutputFileExtension>
-    <MinimumSizeForCutting />
-    <CutParameters>
-      <CutStyle>offset</CutStyle>
-      <CutSizeAtOffset>4</CutSizeAtOffset>
-      <CutSizeOffsetSize>4</CutSizeOffsetSize>
-      <CutSizeOffsetEndianess>little</CutSizeOffsetEndianess>
-    </CutParameters>
-    <AddExtraBytes>false</AddExtraBytes>
-    <AddExtraByteSize />
-  </SearchParameters>
+<OffsetFinderTemplate xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <Header>
+        <FormatName>Fmod fsb</FormatName>
+        <Author>Terminator-based Extractor</Author>
+    </Header>
+    <SearchParameters>
+        <SearchString>46534235</SearchString>
+        <TreatSearchStringAsHex>true</TreatSearchStringAsHex>
+        <StartingOffset>0</StartingOffset>
+        <UseModOffsetForSearchString>false</UseModOffsetForSearchString>
+        <SearchStringOffset>0</SearchStringOffset>
+        <OutputFileExtension>.fsb</OutputFileExtension>
+        <CutParameters>
+            <CutStyle>terminator</CutStyle>
+            <TerminatorString>46534235</TerminatorString>
+            <TreatTerminatorStringAsHex>true</TreatTerminatorStringAsHex>
+            <IncludeTerminatorInSize>false</IncludeTerminatorInSize>
+            <CutSizeAtOffset>0</CutSizeAtOffset>
+            <CutSizeOffsetSize>0</CutSizeOffsetSize>
+            <CutSizeOffsetEndianess>little</CutSizeOffsetEndianess>
+        </CutParameters>
+        <AddExtraBytes>false</AddExtraBytes>
+        <AddExtraByteSize>0</AddExtraByteSize>
+    </SearchParameters>
 </OffsetFinderTemplate>
