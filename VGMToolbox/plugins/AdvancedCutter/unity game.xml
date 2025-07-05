@@ -16,7 +16,6 @@
       <CutStyle>terminator</CutStyle>
       <TerminatorString>556E6974794653</TerminatorString>
       <TreatTerminatorStringAsHex>true</TreatTerminatorStringAsHex>
-      <IncludeTerminatorInSize>false</IncludeTerminatorInSize>
       <CutSizeAtOffset>0</CutSizeAtOffset>
       <CutSizeOffsetSize>0</CutSizeOffsetSize>
       <CutSizeOffsetEndianess>little</CutSizeOffsetEndianess>
