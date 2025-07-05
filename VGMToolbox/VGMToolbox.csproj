@@ -1151,6 +1151,9 @@
     <Content Include="plugins\AdvancedCutter\sony pcm.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="plugins\AdvancedCutter\sony gxt image.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="plugins\AdvancedCutter\unity game.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
