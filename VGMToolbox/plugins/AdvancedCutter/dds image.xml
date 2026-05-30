@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<OffsetFinderTemplate>
+    <Header>
+        <FormatName>DDS Image</FormatName>
+        <Author>涅普缇努</Author>
+    </Header>
+    <SearchParameters>
+        <SearchString>44445320</SearchString>
+        <TreatSearchStringAsHex>true</TreatSearchStringAsHex>
+        <StartingOffset>0</StartingOffset>
+        <UseModOffsetForSearchString>false</UseModOffsetForSearchString>
+        <SearchStringOffset>0</SearchStringOffset>
+        <OutputFileExtension>.dds</OutputFileExtension>
+        <CutParameters>
+            <CutStyle>offset</CutStyle>
+            <CutSizeAtOffset>20</CutSizeAtOffset>
+            <CutSizeOffsetSize>4</CutSizeOffsetSize>
+            <CutSizeOffsetEndianess>little</CutSizeOffsetEndianess>
+            <CutSizeMultiplier>1</CutSizeMultiplier>
+        </CutParameters>
+        <AddExtraBytes>true</AddExtraBytes>
+        <AddExtraByteSize>124</AddExtraByteSize>
+    </SearchParameters>
+</OffsetFinderTemplate>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<OffsetFinderTemplate xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<Header>
+		<FormatName>Unreal Engine package file</FormatName>
+		<Author>涅普缇努</Author>
+	</Header>
+	<SearchParameters>
+		<SearchString>C1832A9E</SearchString>
+		<TreatSearchStringAsHex>true</TreatSearchStringAsHex>
+		<StartingOffset>0</StartingOffset>
+		<UseModOffsetForSearchString>false</UseModOffsetForSearchString>
+		<UseOffsetString>true</UseOffsetString>
+		<OffsetString>None</OffsetString>
+		<OffsetCount>32</OffsetCount>
+		<SearchStringOffset>0</SearchStringOffset>
+		<OutputFileExtension>.uasset</OutputFileExtension>
+		<MinimumSizeForCutting>16</MinimumSizeForCutting>
+		<CutParameters>
+			<CutStyle>terminator</CutStyle>
+			<TerminatorString>C1832A9E</TerminatorString>
+			<TreatTerminatorStringAsHex>true</TreatTerminatorStringAsHex>
+			<CutSizeAtOffset>0</CutSizeAtOffset>
+			<CutSizeOffsetSize>0</CutSizeOffsetSize>
+			<CutSizeOffsetEndianess>little</CutSizeOffsetEndianess>
+		</CutParameters>
+		<AddExtraBytes>false</AddExtraBytes>
+	</SearchParameters>
+	<NotesOrWarnings>
+		此预设用于提取虚幻引擎游戏文件:
+		- 搜索Unreal文件头(C1 83 2A 9E)
+		- 验证偏移32字节处字符串是否为None
+		- 使用相同的文件头作为终止符进行切割
+	</NotesOrWarnings>
+</OffsetFinderTemplate>

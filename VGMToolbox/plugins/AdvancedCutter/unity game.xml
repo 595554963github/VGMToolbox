@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<OffsetFinderTemplate xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<Header>
+		<FormatName>Unity bundle file</FormatName>
+		<Author>涅普缇努</Author>
+	</Header>
+	<SearchParameters>
+		<SearchString>556E6974794653</SearchString>
+		<TreatSearchStringAsHex>true</TreatSearchStringAsHex>
+		<StartingOffset>0</StartingOffset>
+		<UseModOffsetForSearchString>false</UseModOffsetForSearchString>
+		<UseOffsetBytes>true</UseOffsetBytes>
+		<OffsetBytes>352E782E</OffsetBytes>
+		<TreatOffsetBytesAsHex>true</TreatOffsetBytesAsHex>
+		<OffsetCount>12</OffsetCount>
+		<SearchStringOffset>0</SearchStringOffset>
+		<OutputFileExtension>.asset</OutputFileExtension>
+		<MinimumSizeForCutting>16</MinimumSizeForCutting>
+		<CutParameters>
+			<CutStyle>terminator</CutStyle>
+			<TerminatorString>556E6974794653</TerminatorString>
+			<TreatTerminatorStringAsHex>true</TreatTerminatorStringAsHex>
+			<CutSizeAtOffset>0</CutSizeAtOffset>
+			<CutSizeOffsetSize>0</CutSizeOffsetSize>
+			<CutSizeOffsetEndianess>little</CutSizeOffsetEndianess>
+		</CutParameters>
+		<AddExtraBytes>false</AddExtraBytes>
+	</SearchParameters>
+	<NotesOrWarnings>
+		此预设用于提取Unity资源文件:
+		- 搜索Unity文件头(55 6E 69 74 79 46 53)
+		- 验证偏移12字节处是否为35 2E 78 2E(5.x.)
+		- 使用相同的文件头作为终止符进行切割
+	</NotesOrWarnings>
+</OffsetFinderTemplate>

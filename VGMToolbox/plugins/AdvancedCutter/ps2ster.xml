@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<OffsetFinderTemplate>
+  <Header>
+    <FormatName>PlayStation 2 - STER Streams</FormatName>
+    <Author />
+  </Header>
+  <SearchParameters>
+    <SearchString>STER</SearchString>
+    <TreatSearchStringAsHex>false</TreatSearchStringAsHex>
+    <StartingOffset />
+    <UseModOffsetForSearchString>false</UseModOffsetForSearchString>
+    <SearchStringOffset>0x00</SearchStringOffset>
+    <OutputFileExtension>.ster</OutputFileExtension>
+    <MinimumSizeForCutting>0</MinimumSizeForCutting>
+    <CutParameters>
+      <CutStyle>offset</CutStyle>
+      <CutSizeAtOffset>4</CutSizeAtOffset>
+      <CutSizeOffsetSize>4</CutSizeOffsetSize>
+      <CutSizeMultiplier>2</CutSizeMultiplier>
+    </CutParameters>
+    <AddExtraBytes>true</AddExtraBytes>
+    <AddExtraByteSize>0x30</AddExtraByteSize>
+  </SearchParameters>
+</OffsetFinderTemplate>

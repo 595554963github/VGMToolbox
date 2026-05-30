@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<OffsetFinderTemplate xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <Header>
+        <FormatName>JPEG Image</FormatName>
+        <Author>涅普缇努</Author>
+    </Header>
+    <SearchParameters>
+        <SearchString>FFD8FFE0</SearchString>
+        <TreatSearchStringAsHex>true</TreatSearchStringAsHex>
+        <StartingOffset>0</StartingOffset>
+        <UseModOffsetForSearchString>false</UseModOffsetForSearchString>
+        <SearchStringOffset>0</SearchStringOffset>
+        <OutputFileExtension>.jpg</OutputFileExtension>
+        <MinimumSizeForCutting>0</MinimumSizeForCutting>
+        <CutParameters>
+            <CutStyle>terminator</CutStyle>
+            <TerminatorString>FFD9</TerminatorString>
+            <TreatTerminatorStringAsHex>true</TreatTerminatorStringAsHex>
+            <IncludeTerminatorInSize>true</IncludeTerminatorInSize>
+        </CutParameters>
+        <AddExtraBytes>false</AddExtraBytes>
+    </SearchParameters>
+</OffsetFinderTemplate>

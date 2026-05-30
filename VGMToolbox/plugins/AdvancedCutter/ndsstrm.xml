@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<OffsetFinderTemplate>
+  <Header>
+    <FormatName>Nintendo DS - STRM Files</FormatName>
+    <Author>Knurek</Author>
+  </Header>
+  <SearchParameters>
+    <SearchString>5354524DFFFE</SearchString>
+    <TreatSearchStringAsHex>true</TreatSearchStringAsHex>
+    <StartingOffset />
+    <UseModOffsetForSearchString>false</UseModOffsetForSearchString>
+    <SearchStringOffset>0</SearchStringOffset>
+    <OutputFileExtension>.strm</OutputFileExtension>
+    <MinimumSizeForCutting />
+    <CutParameters>
+      <CutStyle>offset</CutStyle>
+      <CutSizeAtOffset>8</CutSizeAtOffset>
+      <CutSizeOffsetSize>4</CutSizeOffsetSize>
+    </CutParameters>
+    <AddExtraBytes>false</AddExtraBytes>
+    <AddExtraByteSize />
+  </SearchParameters>
+</OffsetFinderTemplate>

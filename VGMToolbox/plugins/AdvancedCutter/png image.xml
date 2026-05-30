@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<OffsetFinderTemplate xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<Header>
+		<FormatName>PNG Image</FormatName>
+		<Author>涅普缇努</Author>
+	</Header>
+	<SearchParameters>
+		<SearchString>89504E47</SearchString>
+		<TreatSearchStringAsHex>true</TreatSearchStringAsHex>
+		<StartingOffset>0</StartingOffset>
+		<UseModOffsetForSearchString>false</UseModOffsetForSearchString>
+		<UseOffsetString>true</UseOffsetString>
+		<OffsetString>IHDR</OffsetString>
+		<OffsetCount>12</OffsetCount>
+		<SearchStringOffset>0</SearchStringOffset>
+		<OutputFileExtension>.png</OutputFileExtension>
+		<MinimumSizeForCutting>0</MinimumSizeForCutting>
+		<CutParameters>
+			<CutStyle>terminator</CutStyle>
+			<TerminatorString>00000049454E44AE426082</TerminatorString>
+			<TreatTerminatorStringAsHex>true</TreatTerminatorStringAsHex>
+			<IncludeTerminatorInSize>true</IncludeTerminatorInSize>
+			<CutToEofIfTerminatorNotFound>false</CutToEofIfTerminatorNotFound>
+		</CutParameters>
+		<AddExtraBytes>false</AddExtraBytes>
+	</SearchParameters>
+	<NotesOrWarnings>
+		此预设确保提取有效的PNG文件:
+		- 搜索PNG文件头(89 50 4E 47)
+		- 验证偏移8字节处字符串是否为IHDR标识
+		- 使用IEND块作为终止符
+		- 包含终止符在文件大小内
+	</NotesOrWarnings>
+</OffsetFinderTemplate>

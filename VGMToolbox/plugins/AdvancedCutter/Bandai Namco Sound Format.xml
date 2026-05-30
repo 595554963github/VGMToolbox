@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<OffsetFinderTemplate xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Header>
+    <FormatName>Bandai Namco Sound Format</FormatName>
+    <Author>涅普缇努</Author>
+  </Header>
+  <SearchParameters>
+    <SearchString>424E5346</SearchString>
+    <TreatSearchStringAsHex>true</TreatSearchStringAsHex>
+    <StartingOffset>0</StartingOffset>
+    <UseModOffsetForSearchString>false</UseModOffsetForSearchString>
+    <UseOffsetBytes>true</UseOffsetBytes>
+    <OffsetBytes>73666D74</OffsetBytes>
+    <OffsetCount>12</OffsetCount>
+    <SearchStringOffset>0</SearchStringOffset>
+    <OutputFileExtension>.bnsf</OutputFileExtension>
+    <MinimumSizeForCutting>16</MinimumSizeForCutting>
+    <CutParameters>
+      <CutStyle>terminator</CutStyle>
+      <TerminatorString>424E5346</TerminatorString>
+      <TreatTerminatorStringAsHex>true</TreatTerminatorStringAsHex>
+      <IncludeTerminatorInSize>false</IncludeTerminatorInSize>
+    </CutParameters>
+    <AddExtraBytes>false</AddExtraBytes>
+  </SearchParameters>
+  <NotesOrWarnings>此预设确保提取有效的BNSF文件:
+- 搜索BNSF文件头(42 4E 53 46)
+- 验证偏移12字节处是否为"sfmt"字节序列(73 66 6D 74)
+- 使用terminator方式切割，找到下一个BNSF头结束
+- 最小文件大小为16字节</NotesOrWarnings>
+</OffsetFinderTemplate>

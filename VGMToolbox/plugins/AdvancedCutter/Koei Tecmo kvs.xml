@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<OffsetFinderTemplate>
+  <Header>
+    <FormatName>Koei Tecmo KOVS Files</FormatName>
+	  <Author>涅普缇努</Author>
+  </Header>
+  <SearchParameters>
+    <SearchString>4B4F5653</SearchString>
+    <TreatSearchStringAsHex>true</TreatSearchStringAsHex>
+    <StartingOffset />
+    <UseModOffsetForSearchString>false</UseModOffsetForSearchString>
+    <UseOffsetString>true</UseOffsetString>
+    <OffsetString>OfeP</OffsetString>
+    <OffsetCount>32</OffsetCount>
+    <SearchStringOffset>0</SearchStringOffset>
+    <OutputFileExtension>.kvs</OutputFileExtension>
+    <MinimumSizeForCutting />
+    <CutParameters>
+      <CutStyle>offset</CutStyle>
+      <CutSizeAtOffset>4</CutSizeAtOffset>
+      <CutSizeOffsetSize>4</CutSizeOffsetSize>
+      <CutSizeOffsetEndianess>little</CutSizeOffsetEndianess>
+    </CutParameters>
+    <AddExtraBytes>false</AddExtraBytes>
+    <AddExtraByteSize />
+  </SearchParameters>
+  <NotesOrWarnings>此预设确保提取有效的KVS文件:
+- 搜索KOVS文件头(4B 4F 56 53)
+- 验证偏移32字节处字符串是否为OfeP标识
+- 使用偏移4处的文件大小信息进行切割
+- 小端字节序</NotesOrWarnings>
+</OffsetFinderTemplate>

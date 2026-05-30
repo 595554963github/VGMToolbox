@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<OffsetFinderTemplate>
+  <Header>
+    <FormatName>Koei Tecmo KTSS Files</FormatName>
+	  <Author>涅普缇努</Author>
+  </Header>
+  <SearchParameters>
+    <SearchString>4B545353</SearchString>
+    <TreatSearchStringAsHex>true</TreatSearchStringAsHex>
+    <StartingOffset />
+    <UseModOffsetForSearchString>false</UseModOffsetForSearchString>
+    <UseOffsetBytes>true</UseOffsetBytes>
+    <OffsetBytes>09000303</OffsetBytes>
+    <OffsetCount>32</OffsetCount>
+    <SearchStringOffset>0</SearchStringOffset>
+    <OutputFileExtension>.ktss</OutputFileExtension>
+    <MinimumSizeForCutting />
+    <CutParameters>
+      <CutStyle>offset</CutStyle>
+      <CutSizeAtOffset>4</CutSizeAtOffset>
+      <CutSizeOffsetSize>4</CutSizeOffsetSize>
+      <CutSizeOffsetEndianess>little</CutSizeOffsetEndianess>
+    </CutParameters>
+    <AddExtraBytes>false</AddExtraBytes>
+    <AddExtraByteSize />
+  </SearchParameters>
+  <NotesOrWarnings>此预设确保提取有效的KTSS文件:
+- 搜索KTSS文件头(4B 54 53 53)
+- 验证偏移32字节处字节序列是否为09000303
+- 使用偏移4处的文件大小信息进行切割
+- 小端字节序</NotesOrWarnings>
+</OffsetFinderTemplate>

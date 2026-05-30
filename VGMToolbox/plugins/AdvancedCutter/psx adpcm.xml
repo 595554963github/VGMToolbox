@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<OffsetFinderTemplate xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<Header>
+		<FormatName>psx_adpcm</FormatName>
+		<Author>涅普缇努</Author>
+	</Header>
+	<SearchParameters>
+		<SearchString>00000000000000000000000000000000</SearchString>
+		<TreatSearchStringAsHex>true</TreatSearchStringAsHex>
+		<StartingOffset>0</StartingOffset>
+		<UseModOffsetForSearchString>false</UseModOffsetForSearchString>
+		<SearchStringOffset>0</SearchStringOffset>
+		<OutputFileExtension>.pcm</OutputFileExtension>
+		<MinimumSizeForCutting>1</MinimumSizeForCutting>
+		<CutParameters>
+			<CutStyle>terminator</CutStyle>
+			<TerminatorString>00077777777777777777777777777777</TerminatorString>
+			<TreatTerminatorStringAsHex>true</TreatTerminatorStringAsHex>
+			<IncludeTerminatorInSize>true</IncludeTerminatorInSize>
+		</CutParameters>
+		<AddExtraBytes>false</AddExtraBytes>
+	</SearchParameters>
+</OffsetFinderTemplate>
