@@ -1,0 +1,240 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <EnableWindowsTargeting>true</EnableWindowsTargeting>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>VGMToolbox</RootNamespace>
+    <AssemblyName>VGMToolbox</AssemblyName>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <Nullable>disable</Nullable>
+    <EnableDefaultEmbeddedResourceItems>false</EnableDefaultEmbeddedResourceItems>
+    <StartupObject>VGMToolbox.Program</StartupObject>
+    <ApplicationIcon>Resources\ToolBox-2.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>embedded</DebugType>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DebugType>embedded</DebugType>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="SharpZipLib" />
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\dbutil\dbutil.csproj" />
+    <ProjectReference Include="..\format\format.csproj" />
+    <ProjectReference Include="..\vgmtplugin\vgmtplugin.csproj" />
+    <ProjectReference Include="..\vgmtutil\vgmtutil.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="credits.txt" CopyToOutputDirectory="Always" />
+    <Content Include="external\psf2\mkpsf2.exe" CopyToOutputDirectory="Always" />
+    <Content Include="external\sox\dir.txt" CopyToOutputDirectory="PreserveNewest" />
+    <Content Include="external\ssf\seqext.py" CopyToOutputDirectory="Always" />
+    <Content Include="external\ssf\ssfinfo\ssfinfo.py" CopyToOutputDirectory="Always" />
+    <Content Include="external\ssf\ssfmake\ssfmake.py" CopyToOutputDirectory="Always" />
+    <Content Include="external\ssf\ssftime.py" CopyToOutputDirectory="Always" />
+    <Content Include="external\ssf\tonext.py" CopyToOutputDirectory="Always" />
+    <Content Include="external\xma\dir.txt" CopyToOutputDirectory="Always" />
+    <Content Include="history.txt" CopyToOutputDirectory="Always" />
+    <Content Include="hoot\dir.txt" CopyToOutputDirectory="Always" />
+    <Content Include="ICSharpCode.SharpZipLib.dll.COPYING.txt" CopyToOutputDirectory="Always" />
+    <Content Include="examine\dir.txt" CopyToOutputDirectory="Always" />
+    <Content Include="external\psfpoint.exe" CopyToOutputDirectory="Always" />
+    <Content Include="LICENSE.txt" CopyToOutputDirectory="Always" />
+    <Content Include="plugins\AdvancedCutter\3dscseq.xml" CopyToOutputDirectory="Always" />
+    <Content Include="plugins\AdvancedCutter\3dscstm.xml" CopyToOutputDirectory="Always" />
+    <Content Include="plugins\AdvancedCutter\3dscwav.xml" CopyToOutputDirectory="Always" />
+    <Content Include="plugins\AdvancedCutter\arcbmiidx2dx.xml" CopyToOutputDirectory="Always" />
+    <Content Include="plugins\AdvancedCutter\arcbmiidxsd9.xml" CopyToOutputDirectory="Always" />
+    <Content Include="plugins\AdvancedCutter\Bandai Namco Sound Format.xml" CopyToOutputDirectory="Always" />
+    <Content Include="plugins\AdvancedCutter\dds image.xml" CopyToOutputDirectory="Always" />
+    <Content Include="plugins\AdvancedCutter\dir.txt" CopyToOutputDirectory="Always" />
+    <Content Include="plugins\AdvancedCutter\Fmod fsb.xml" CopyToOutputDirectory="Always" />
+    <Content Include="plugins\AdvancedCutter\jpg image.xml" CopyToOutputDirectory="Always" />
+    <Content Include="plugins\AdvancedCutter\Koei Tecmo ktss.xml" CopyToOutputDirectory="Always" />
+    <Content Include="plugins\AdvancedCutter\Koei Tecmo kvs.xml" CopyToOutputDirectory="Always" />
+    <Content Include="plugins\AdvancedCutter\mswma.xml" CopyToOutputDirectory="Always" />
+    <Content Include="plugins\AdvancedCutter\ndssmd.xml" CopyToOutputDirectory="Always" />
+    <Content Include="plugins\AdvancedCutter\ndssseq.xml" CopyToOutputDirectory="Always" />
+    <Content Include="plugins\AdvancedCutter\ndsstrm.xml" CopyToOutputDirectory="Always" />
+    <Content Include="plugins\AdvancedCutter\ndsswav.xml" CopyToOutputDirectory="Always" />
+    <Content Include="plugins\AdvancedCutter\ndsswd.xml" CopyToOutputDirectory="Always" />
+    <Content Include="plugins\AdvancedCutter\png image.xml" CopyToOutputDirectory="Always" />
+    <Content Include="plugins\AdvancedCutter\ps2adsss2type1.xml" CopyToOutputDirectory="Always" />
+    <Content Include="plugins\AdvancedCutter\ps2adsss2type2.xml" CopyToOutputDirectory="Always" />
+    <Content Include="plugins\AdvancedCutter\ps2adsss2type3.xml" CopyToOutputDirectory="Always" />
+    <Content Include="plugins\AdvancedCutter\ps2bmdx.xml" CopyToOutputDirectory="Always" />
+    <Content Include="plugins\AdvancedCutter\ps2hd.xml" CopyToOutputDirectory="Always" />
+    <Content Include="plugins\AdvancedCutter\ps2ild.xml" CopyToOutputDirectory="Always" />
+    <Content Include="plugins\AdvancedCutter\ps2kces.xml" CopyToOutputDirectory="Always" />
+    <Content Include="plugins\AdvancedCutter\ps2sq.xml" CopyToOutputDirectory="Always" />
+    <Content Include="plugins\AdvancedCutter\ps2ster.xml" CopyToOutputDirectory="Always" />
+    <Content Include="plugins\AdvancedCutter\ps2svag.xml" CopyToOutputDirectory="Always" />
+    <Content Include="plugins\AdvancedCutter\ps2vagptype1.xml" CopyToOutputDirectory="Always" />
+    <Content Include="plugins\AdvancedCutter\ps2vagptype2.xml" CopyToOutputDirectory="Always" />
+    <Content Include="plugins\AdvancedCutter\ps2vagptype3.xml" CopyToOutputDirectory="Always" />
+    <Content Include="plugins\AdvancedCutter\ps2vsf.xml" CopyToOutputDirectory="Always" />
+    <Content Include="plugins\AdvancedCutter\psxseq.xml" CopyToOutputDirectory="Always" />
+    <Content Include="plugins\AdvancedCutter\ndssdat.xml" CopyToOutputDirectory="Always" />
+    <Content Include="plugins\AdvancedCutter\psxvab.xml" CopyToOutputDirectory="Always" />
+    <Content Include="plugins\AdvancedCutter\unreal game.xml" CopyToOutputDirectory="Always" />
+    <Content Include="plugins\AdvancedCutter\waveform audio.xml" CopyToOutputDirectory="Always" />
+    <Content Include="plugins\AdvancedCutter\sddrvs.tsk.xml" CopyToOutputDirectory="Always" />
+    <Content Include="plugins\AdvancedCutter\sony gxt image.xml" CopyToOutputDirectory="Always" />
+    <Content Include="plugins\AdvancedCutter\psx adpcm.xml" CopyToOutputDirectory="Always" />
+    <Content Include="plugins\AdvancedCutter\unity game.xml" CopyToOutputDirectory="Always" />
+    <Content Include="plugins\AdvancedCutter\webp image.xml" CopyToOutputDirectory="Always" />
+    <Content Include="plugins\AdvancedCutter\wiirbnk.xml" CopyToOutputDirectory="Always" />
+    <Content Include="plugins\AdvancedCutter\wiirseq.xml" CopyToOutputDirectory="Always" />
+    <Content Include="plugins\AdvancedCutter\wiirwar.xml" CopyToOutputDirectory="Always" />
+    <Content Include="plugins\AdvancedCutter\wiirwav.xml" CopyToOutputDirectory="Always" />
+    <Content Include="plugins\AdvancedCutter\wiirwsd.xml" CopyToOutputDirectory="Always" />
+    <Content Include="plugins\AdvancedCutter\dcdtpk.xml" CopyToOutputDirectory="Always" />
+    <Content Include="plugins\AdvancedCutter\wiiufwar.xml" CopyToOutputDirectory="Always" />
+    <Content Include="plugins\AdvancedCutter\wiiufwav.xml" CopyToOutputDirectory="Always" />
+    <Content Include="plugins\AdvancedCutter\wwise audio.xml" CopyToOutputDirectory="Always" />
+    <Content Include="plugins\AdvancedCutter\x360tri-ace-iu-so4-wavestrm.xml" CopyToOutputDirectory="Always" />
+    <Content Include="plugins\VFSExtractor\dir.txt" CopyToOutputDirectory="Always" />
+    <Content Include="plugins\XmaConverter\dir.txt" CopyToOutputDirectory="Always" />
+    <Content Include="plugins\XmaConverter\xbox360_blur.xml" CopyToOutputDirectory="Always" />
+    <Content Include="plugins\XmaConverter\xbox360_dead_rising.xml" CopyToOutputDirectory="Always" />
+    <Content Include="plugins\XmaConverter\xbox360_fallout_new_vegas.xml" CopyToOutputDirectory="Always" />
+    <Content Include="plugins\XmaConverter\xbox360_infinite_undiscovery.xml" CopyToOutputDirectory="Always" />
+    <Content Include="readme.txt" CopyToOutputDirectory="Always" />
+    <Content Include="Resources\audioCd.ico" CopyToOutputDirectory="Always" />
+    <Content Include="Resources\emptyCd.ico" CopyToOutputDirectory="Always" />
+    <Content Include="Resources\genericFile.ico" CopyToOutputDirectory="Always" />
+    <Content Include="Resources\normalFolder.ico" CopyToOutputDirectory="Always" />
+    <Content Include="Resources\openFolder.ico" CopyToOutputDirectory="Always" />
+    <Content Include="rips\dir.txt" CopyToOutputDirectory="Always" />
+    <Content Include="tools\data\startup.tjs" CopyToOutputDirectory="Always" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\Button-Refresh-16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Form1.resx" />
+    <EmbeddedResource Include="Form2.resx" />
+    <EmbeddedResource Include="forms\audit\CollectionBuilderForm.resx" />
+    <EmbeddedResource Include="forms\audit\DatafileCheckerForm.resx" />
+    <EmbeddedResource Include="forms\audit\DatafileCreatorForm.resx" />
+    <EmbeddedResource Include="forms\audit\RebuilderForm.resx" />
+    <EmbeddedResource Include="forms\examine\EmbeddedTagsUpdateForm.resx" />
+    <EmbeddedResource Include="forms\examine\TagViewerForm.resx" />
+    <EmbeddedResource Include="forms\extraction\CriAcbAwbExtractorForm.resx" />
+    <EmbeddedResource Include="forms\extraction\CriCpkExtractorForm.resx" />
+    <EmbeddedResource Include="forms\extraction\OffsetFinderForm.resx" />
+    <EmbeddedResource Include="forms\Gbs_GbsToM3uForm.resx" />
+    <EmbeddedResource Include="forms\hoot\XmlBuilderForm.resx" />
+    <EmbeddedResource Include="forms\nsf\Nsfe2NsfM3uForm.resx" />
+    <EmbeddedResource Include="forms\examine\SingleTagUpdateForm.resx" />
+    <EmbeddedResource Include="forms\other\ExternalListFileRenamerForm.resx" />
+    <EmbeddedResource Include="forms\xsf\SdatOptimizerForm.resx" />
+    <EmbeddedResource Include="forms\xsf\TwoSfTimerForm.resx" />
+    <EmbeddedResource Include="forms\xsf\Bin2PsfFrontEndForm.resx" />
+    <EmbeddedResource Include="forms\xsf\Mkpsf2FrontEndForm.resx" />
+    <EmbeddedResource Include="forms\xsf\Psf2SqExtractorForm.resx" />
+    <EmbeddedResource Include="forms\xsf\Psf2TimerForm.resx" />
+    <EmbeddedResource Include="forms\xsf\Psf2ToPsf2LibForm.resx" />
+    <EmbeddedResource Include="forms\extraction\SdatExtractorForm.resx" />
+    <EmbeddedResource Include="forms\extraction\SdatFinderForm.resx" />
+    <EmbeddedResource Include="forms\xsf\SsfMakeFrontEndForm.resx" />
+    <EmbeddedResource Include="forms\xsf\SsfSeqTonExtForm.resx" />
+    <EmbeddedResource Include="forms\xsf\UnpackPsf2Form.resx" />
+    <EmbeddedResource Include="forms\xsf\Xsf2ExeForm.resx" />
+    <EmbeddedResource Include="forms\ZZZ_NotYetImplemented.resx" />
+    <EmbeddedResource Include="Properties\Resources.resx" />
+    <EmbeddedResource Include="Splash.resx" />
+    <EmbeddedResource Include="controls\ByteSearchCalculatingOffsetDescriptionControl.resx" />
+    <EmbeddedResource Include="controls\CalculatingOffsetDescriptionControl.resx" />
+    <EmbeddedResource Include="controls\RiffCalculatingOffsetDescriptionControl.resx" />
+    <EmbeddedResource Include="controls\SortableFileListControl.resx" />
+    <EmbeddedResource Include="forms\AboutForm.resx" />
+    <EmbeddedResource Include="forms\audit\DatafileEditorForm.resx" />
+    <EmbeddedResource Include="forms\compression\GzipCompressionForm.resx" />
+    <EmbeddedResource Include="forms\examine\CrcCalculatorForm.resx" />
+    <EmbeddedResource Include="forms\examine\SearchForFileForm.resx" />
+    <EmbeddedResource Include="forms\extraction\ByteRemoverForm.resx" />
+    <EmbeddedResource Include="forms\extraction\ExtractAdxForm.resx" />
+    <EmbeddedResource Include="forms\extraction\ExtractCdxaForm.resx" />
+    <EmbeddedResource Include="forms\extraction\ExtractHcaForm.resx" />
+    <EmbeddedResource Include="forms\extraction\ExtractNintendoU8ArchiveForm.resx" />
+    <EmbeddedResource Include="forms\extraction\ExtractOggForm.resx" />
+    <EmbeddedResource Include="forms\extraction\ExtractSonyAdpcmForm.resx" />
+    <EmbeddedResource Include="forms\extraction\IsoExtractorForm.resx" />
+    <EmbeddedResource Include="forms\extraction\MidiExtractorForm.resx" />
+    <EmbeddedResource Include="forms\extraction\SavePresetForm.resx" />
+    <EmbeddedResource Include="forms\extraction\SnakebiteGuiForm.resx" />
+    <EmbeddedResource Include="forms\compression\ZlibCompressionForm.resx" />
+    <EmbeddedResource Include="forms\extraction\UnpackNintendoWadForm.resx" />
+    <EmbeddedResource Include="forms\extraction\VfsExtractorForm.resx" />
+    <EmbeddedResource Include="forms\Genh_CreatorForm.resx" />
+    <EmbeddedResource Include="forms\hoot\HootAuditorForm.resx" />
+    <EmbeddedResource Include="forms\other\InterleaverForm.resx" />
+    <EmbeddedResource Include="forms\other\InternalNameFileRenamerForm.resx" />
+    <EmbeddedResource Include="forms\nsf\NsfToM3uForm.resx" />
+    <EmbeddedResource Include="controls\OffsetDescriptionControl.resx" />
+    <EmbeddedResource Include="forms\stream\PosFileCreatorForm.resx" />
+    <EmbeddedResource Include="forms\stream\MpegDemuxForm.resx" />
+    <EmbeddedResource Include="forms\stream\XmaConvertForm.resx" />
+    <EmbeddedResource Include="forms\stream\XmashMashForm.resx" />
+    <EmbeddedResource Include="forms\xsf\EasyPsfDriverExtractorForm.resx" />
+    <EmbeddedResource Include="forms\xsf\Psf2DataFinderForm.resx" />
+    <EmbeddedResource Include="forms\xsf\Psf2SettingsUpdaterForm.resx" />
+    <EmbeddedResource Include="forms\xsf\PsfDataFinderForm.resx" />
+    <EmbeddedResource Include="forms\xsf\PsfStubMakerForm.resx" />
+    <EmbeddedResource Include="forms\TreeViewVgmtForm.resx" />
+    <EmbeddedResource Include="forms\xsf\PspSeqDataFinderForm.resx" />
+    <EmbeddedResource Include="forms\xsf\PsxSepToSeqExtractorForm.resx" />
+    <EmbeddedResource Include="forms\xsf\SsfMakeAdvancedForm.resx" />
+    <EmbeddedResource Include="forms\xsf\VabSplitterForm.resx" />
+    <EmbeddedResource Include="forms\examine\VgmTagsUpdateForm.resx" />
+    <EmbeddedResource Include="forms\Vgm_VgmTagEditorForm.resx" />
+    <EmbeddedResource Include="forms\examine\XsfTagsUpdateForm.resx" />
+    <EmbeddedResource Include="forms\xsf\NdsTo2sfForm.resx" />
+    <EmbeddedResource Include="forms\xsf\TwoSfTagsMigratorForm.resx" />
+    <EmbeddedResource Include="forms\xsf\Make2sfForm.resx" />
+    <EmbeddedResource Include="forms\xsf\PsfTimerForm.resx" />
+    <EmbeddedResource Include="forms\xsf\RecompressDataForm.resx" />
+    <EmbeddedResource Include="forms\xsf\XsfTagEditorForm.resx" />
+    <EmbeddedResource Include="Resources\bolo2.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Settings.settings" />
+    <None Include="App.config" />
+    <None Include="db\collection.s3db" />
+    <None Include="external\psf2\modules\cdvdnul.irx" />
+    <None Include="external\psf2\modules\fakesif.irx" />
+    <None Include="external\psf2\modules\myhost.irx" />
+    <None Include="external\psf2\modules\psf2.irx" />
+    <None Include="external\psf2\modules\sq.irx" />
+    <None Include="external\ssf\ssfmake\GEN_DSP10040.MAP" />
+    <None Include="external\ssf\ssfmake\GEN_DSP20040.MAP" />
+    <None Include="external\ssf\ssfmake\GEN_DSP4040.MAP" />
+    <None Include="external\ssf\ssfmake\GEN_DSP8040.MAP" />
+    <None Include="external\ssf\ssfmake\GEN_SEQ07000.MAP" />
+    <None Include="external\ssf\ssfmake\GEN_SEQ08000.MAP" />
+    <None Include="external\ssf\ssfmake\GEN_SEQ10000.MAP" />
+    <None Include="external\ssf\ssfmake\GEN_SEQ20000.MAP" />
+    <None Include="Resources\toolbox.bmp" />
+    <None Include="Resources\ToolBox-2.ico" />
+    <None Include="Resources\fs.jpg" />
+    <None Include="xsd\datafile.dtd" />
+    <None Include="xsd\datafile.xsd" />
+    <None Include="xsd\hoot.dtd" />
+    <None Include="xsd\hoot.xsd" />
+    <None Include="xsd\OffsetFinder.xsd" />
+    <None Include="xsd\VfsExtractor.xsd" />
+    <None Include="xsd\XmaConverter.xsd" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="汉化说明.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+</Project>

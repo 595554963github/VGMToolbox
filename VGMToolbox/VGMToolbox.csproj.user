@@ -1,0 +1,447 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <Compile Update="auditing\DatafileCheckerWorker.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="auditing\DatafileCreatorWorker.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="auditing\RebuilderWorker.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="controls\ByteSearchCalculatingOffsetDescriptionControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="controls\CalculatingOffsetDescriptionControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="controls\OffsetDescriptionControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="controls\RiffCalculatingOffsetDescriptionControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="controls\SortableFileListControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="forms\AboutForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="forms\audit\CollectionBuilderForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="forms\audit\DatafileCheckerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="forms\audit\DatafileCreatorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="forms\audit\DatafileEditorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="forms\audit\RebuilderForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="forms\compression\GzipCompressionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="forms\compression\ZlibCompressionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="forms\EmptyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="forms\examine\CrcCalculatorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="forms\examine\EmbeddedTagsUpdateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="forms\examine\SearchForFileForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="forms\examine\SingleTagUpdateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="forms\examine\TagViewerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="forms\examine\VgmTagsUpdateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="forms\examine\XsfTagsUpdateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="forms\extraction\ByteRemoverForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="forms\extraction\CriAcbAwbExtractorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="forms\extraction\CriCpkExtractorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="forms\extraction\ExtractAdxForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="forms\extraction\ExtractCdxaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="forms\extraction\ExtractHcaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="forms\extraction\ExtractNintendoU8ArchiveForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="forms\extraction\ExtractOggForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="forms\extraction\ExtractSonyAdpcmForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="forms\extraction\IsoExtractorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="forms\extraction\MidiExtractorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="forms\extraction\OffsetFinderForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="forms\extraction\SavePresetForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="forms\extraction\SdatExtractorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="forms\extraction\SdatFinderForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="forms\extraction\SnakebiteGuiForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="forms\extraction\UnpackNintendoWadForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="forms\extraction\VfsExtractorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="forms\Gbs_GbsToM3uForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="forms\Genh_CreatorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="forms\hoot\HootAuditorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="forms\hoot\XmlBuilderForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="forms\nsf\Nsfe2NsfM3uForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="forms\nsf\NsfToM3uForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="forms\other\ExternalListFileRenamerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="forms\other\InterleaverForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="forms\other\InternalNameFileRenamerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="forms\stream\MpegDemuxForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="forms\stream\PosFileCreatorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="forms\stream\XmaConvertForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="forms\stream\XmashMashForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="forms\TreeViewVgmtForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="forms\Vgm_VgmTagEditorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="forms\xsf\Bin2PsfFrontEndForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="forms\xsf\EasyPsfDriverExtractorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="forms\xsf\Make2sfForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="forms\xsf\Mkpsf2FrontEndForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="forms\xsf\NdsTo2sfForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="forms\xsf\Psf2DataFinderForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="forms\xsf\Psf2SettingsUpdaterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="forms\xsf\Psf2SqExtractorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="forms\xsf\Psf2TimerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="forms\xsf\Psf2ToPsf2LibForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="forms\xsf\PsfDataFinderForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="forms\xsf\PsfStubMakerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="forms\xsf\PsfTimerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="forms\xsf\PspSeqDataFinderForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="forms\xsf\PsxSepToSeqExtractorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="forms\xsf\RecompressDataForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="forms\xsf\SdatOptimizerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="forms\xsf\SsfMakeAdvancedForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="forms\xsf\SsfMakeFrontEndForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="forms\xsf\SsfSeqTonExtForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="forms\xsf\TwoSfTagsMigratorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="forms\xsf\TwoSfTimerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="forms\xsf\UnpackPsf2Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="forms\xsf\VabSplitterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="forms\xsf\Xsf2ExeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="forms\xsf\XsfTagEditorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="forms\ZZZ_NotYetImplemented.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Splash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="tools\examine\ExamineChecksumGeneratorWorker.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="tools\examine\ExamineSearchForFileWorker.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="tools\extract\ByteRemoverWorker.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="tools\extract\ExtractAdxWorker.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="tools\extract\ExtractCdxaWorker.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="tools\extract\ExtractCriAcbAwbWorker.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="tools\extract\ExtractCriCpkWorker.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="tools\extract\ExtractHcaWorker.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="tools\extract\ExtractMidiWorker.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="tools\extract\ExtractNintendoU8ArchiveWorker.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="tools\extract\ExtractOggWorker.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="tools\extract\ExtractSonyAdpcmWorker.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="tools\extract\GzipExtractorWorker.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="tools\extract\IsoExtractorWorker.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="tools\extract\OffsetFinderWorker.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="tools\extract\SimpleCutterSnakebiteWorker.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="tools\extract\UnpackNintendoWadWorker.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="tools\extract\VfsExtractorWorker.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="tools\extract\ZlibExtractorWorker.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="tools\gbs\GbsM3uBuilderWorker.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="tools\genh\GenhCreatorWorker.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="tools\hoot\HootAuditorWorker.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="tools\hoot\HootXmlBuilderWorker.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="tools\nds\SdatExtractorWorker.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="tools\nds\SdatFinderWorker.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="tools\nsf\NsfeM3uBuilderWorker.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="tools\other\ExternalListFileRenamerWorker.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="tools\other\InternalNameFileRenamerWorker.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="tools\stream\MpegDemuxWorker.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="tools\stream\PosFileCreatorWorker.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="tools\stream\XmaConverterWorker.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="tools\stream\XmashMashWorker.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="tools\TreeBuilderWorker.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="tools\vgm\VgmTagUpdaterWorker.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="tools\xsf\Bin2PsfWorker.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="tools\xsf\EasyPsfDriverExtractionWorker.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="tools\xsf\Mk2sfWorker.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="tools\xsf\MkPsf2Worker.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="tools\xsf\NdsTo2sfWorker.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="tools\xsf\Psf2DataFinderWorker.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="tools\xsf\Psf2SettingsUpdaterWorker.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="tools\xsf\Psf2SqExtractorWorker.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="tools\xsf\Psf2TimerWorker.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="tools\xsf\Psf2toPsf2LibWorker.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="tools\xsf\PsfDataFinderWorker.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="tools\xsf\PsfStubMakerWorker.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="tools\xsf\PsfTimerWorker.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="tools\xsf\PspSeqDataFinderWorker.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="tools\xsf\PsxSepToSeqExtractorWorker.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="tools\xsf\SdatOptimizerWorker.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="tools\xsf\SsfMakeAdvancedWorker.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="tools\xsf\SsfMakeWorker.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="tools\xsf\SsfSeqTonExtractorWorker.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="tools\xsf\Time2sfWorker.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="tools\xsf\UnpkPsf2Worker.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="tools\xsf\VabSplitterWorker.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="tools\xsf\Xsf2sfTagMigratorWorker.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="tools\xsf\XsfCompressedProgramExtractorWorker.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="tools\xsf\XsfRecompressDataWorker.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="tools\xsf\XsfTagUpdaterWorker.cs">
+      <SubType>Component</SubType>
+    </Compile>
+  </ItemGroup>
+</Project>

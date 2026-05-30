@@ -1,0 +1,55 @@
+——偷吃布丁的涅普提努
+
+20250126
+感谢Manicsteiner分享的源码，添加了多个xml文件，用于高级切割器/偏移量查找器，分别是wiiufwar.xml、wiiufwav.xml、RIFX大端序wem.xml、webp image.xml、wwise-pck-wsp-bnk.xml、Koei Tecmo kvs.xml、sony pcm.xml、dds image.xml、png image.xml、unity file共10个xml文件
+
+
+20250330
+修改部分文本错误，修改.NET框架为4.8.1，升级nuget包，debug修改为release版
+
+
+2025530
+修改部分xml预设参数，切割文件更方便，增加jpg image.xml。
+
+
+20250923
+去掉一些反人类的东西
+
+ogg提取器 提取文件名由源文件名+偏移量改成源文件名+数字.ogg
+
+cd-xa提取器 提取文件名由源文件名+偏移量改成源文件名+数字.xa，默认提取到和源文件同名的子文件夹里
+
+hca提取器 提取文件名由源文件名+偏移量改成源文件名+数字.hca，彻底解决提取界面卡死的bug
+
+adx提取器 提取文件名由源文件名+偏移量改成源文件名+数字.adx，彻底解决提取界面卡死的bug
+
+cpk提取器 提取的文件夹名称改成源文件名(不含.cpk)_Extract，杜绝出现文件夹名称含.cpk后缀的不合理现象
+
+awb提取器 提取的文件夹名称改成源文件名(不含.awb)_Extract，杜绝出现文件夹名称含.awb后缀的不合理现象
+
+同时子文件夹里的文件会根据文件头来自动保存为hca、at3或者bin，而不是默认保存为bin
+
+acb提取器 直接提取到同名的_Extract文件夹里，移除中间多余的acb和awb文件夹，实在是反人类
+
+20251003
+修复3ds平台的moflex无法解复用的问题，改成直接转换成mp4，需要安装ffmpeg，下载Mobius.exe放到ffmpeg相同目录内
+
+wmv和asf选项合并到一起，都是微软家的视频格式，解码的wma.raw和wmv.raw没有任何使用价值，再次调用ffmpeg，仅提取音频流时提取raw.wma，
+仅提取视频流时提取无声的raw.wmv，如果选择提取视频流和音频流则将直接转换成mp4。
+
+新增amv、cmv、ogv提取器，感谢xmoezzz提供的AlphaMovieDecoderFake，Pkuism提供的CMVDecode，ogv是从omv里提取获得，
+初恋1／1等游戏的omv实际上是给假文件头的ogv文件，删除多余填充字节就可以获得ogv，调用ffmpeg可转换成成mp4
+
+修复psp平台的mps解复用器提取到无头部的音频流文件，现在可提取到带头部的正常音频文件
+
+bink视频解复用器删除文件名中的偏移量，简化解复用后的文件名
+
+mpeg视频解复用器删除文件名中的偏移量，比如usm，op.usm解复用后得到的是op.m2v和op.hca或者op.adx，没有之前的偏移量了
+很多视频解复用器都继承了MpegStream，所以这一改动影响了很多解复用器
+
+解复用器默认选项格式改为usm，这个解复用器是目前用到的最多的
+
+20260530
+升级NET框架到8.0，修复升级框架引发的大量运行异常，症状为主程序无法启动，部分窗口运行的时候弹出异常错误，在调试模式下定位异常堆栈信息挨个修复，马勒戈壁的，我说这个工具这么多年来没人给它升级NET框架，原来这么恶心啊，从未见过如此厚颜无耻的NET Framework项目，添加wii的ckey.bin，测试了一下，不是很灵，有些游戏iso镜像可以用它解包，如果解不了就用其他的工具代替吧，然后是删除了cmv解码器和相关函数，紫社引擎的cmd解码器不好使，然后amv解码器改用C#语言重写，删除了那几个解amv的那几个exe和dll依赖，减少体积，索尼adpcm提取器之前是无效的，现在我已经改成专门提取psx adpcm的，很多索尼的游戏使用的是无头adpcm文件，特征是前16个字节是00，文件末尾为00 07和14个77，提取后会自动创建txth文件，然后就可以用vgmstream解码，用foobar2000播放了。修复cpk提取器，升级NET框架后解包cpk会报错，注册编码后解决了报错。
+
+
