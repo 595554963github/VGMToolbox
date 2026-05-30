@@ -1,0 +1,67 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <RootNamespace>format</RootNamespace>
+    <AssemblyName>format</AssemblyName>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <Nullable>disable</Nullable>
+    <EnableDefaultEmbeddedResourceItems>false</EnableDefaultEmbeddedResourceItems>
+    <UseWindowsForms>true</UseWindowsForms>
+    <EnableWindowsTargeting>true</EnableWindowsTargeting>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>embedded</DebugType>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DebugType>embedded</DebugType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="SharpZipLib" />
+    <PackageReference Include="DotNetZip" />
+    <PackageReference Include="ManagedBass" />
+    <PackageReference Include="ManagedBass.Midi" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\vgmtutil\vgmtutil.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="external\2sf\sseq2mid.exe" CopyToOutputDirectory="Always" />
+    <Content Include="external\bin2psf.exe" CopyToOutputDirectory="Always" />
+    <Content Include="external\psf2\unpkpsf2.exe" CopyToOutputDirectory="Always" />
+    <Content Include="external\psfpoint.exe" CopyToOutputDirectory="Always" />
+    <Content Include="external\psf\EZPSF_V104.EXE" CopyToOutputDirectory="Always" />
+    <Content Include="external\psf\listsig.exe" CopyToOutputDirectory="Always" />
+    <Content Include="external\psf\MG_DRIVER_V25.SEQ.INFINITE.EXE" CopyToOutputDirectory="Always" />
+    <Content Include="external\psf\MG_DRIVER_V300.SEQ.INFINITE.EXE" CopyToOutputDirectory="Always" />
+    <Content Include="external\psf\MG_DRIVER_V422.SEQ.INFINITE.EXE" CopyToOutputDirectory="PreserveNewest" />
+    <Content Include="external\psf\minipsf.exe" CopyToOutputDirectory="Always" />
+    <Content Include="external\psf\sigfind.exe" CopyToOutputDirectory="Always" />
+    <Content Include="external\psf\sigfind2.exe" CopyToOutputDirectory="Always" />
+    <Content Include="external\wiiu\dir.txt" CopyToOutputDirectory="Always" />
+    <Content Include="external\wii\dir.txt" CopyToOutputDirectory="Always" />
+    <Content Include="lib\Ionic.Zip.dll" CopyToOutputDirectory="Always" />
+    <Content Include="lib\Ionic.Zip.License.txt" CopyToOutputDirectory="Always" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="external\docs\Nintendo_Companys.txt" />
+    <Content Include="lib\Ionic.Zip.Debug.dll" />
+    <Content Include="lib\Ionic.Zip.XML" />
+    <Content Include="VGMToolbox\format\CueSharp.LICENSE.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="external\psf\mk.bat" />
+    <None Include="external\psf\psfdrv.c" />
+    <None Include="external\psf\sig.dat" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="external\wiiu\ckey.bin">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="external\wii\ckey.bin">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+</Project>
