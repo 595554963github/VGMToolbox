@@ -1,0 +1,44 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <RootNamespace>vgmtutil</RootNamespace>
+    <AssemblyName>vgmtutil</AssemblyName>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <Nullable>disable</Nullable>
+    <EnableDefaultEmbeddedResourceItems>false</EnableDefaultEmbeddedResourceItems>
+    <EnableWindowsTargeting>true</EnableWindowsTargeting>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>embedded</DebugType>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DebugType>embedded</DebugType>
+  </PropertyGroup>
+  <ItemGroup>
+<Reference Include="jsutil">
+      <HintPath>lib\jsutil.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <FrameworkReference Include="Microsoft.WindowsDesktop.App.WindowsForms" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="SharpZipLib" />
+    <PackageReference Include="DotNetZip" />
+    <PackageReference Include="Squid-Box.SevenZipSharp" />
+    <PackageReference Include="System.Text.Encoding.CodePages" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="lib\Ionic.Zip.dll" CopyToOutputDirectory="Always" />
+    <Content Include="lib\Ionic.Zip.License.txt" CopyToOutputDirectory="Always" />
+    <Content Include="lib\jsutil.dll" CopyToOutputDirectory="Always" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="lib\Ionic.Zip.Debug.dll" />
+    <Content Include="lib\Ionic.Zip.XML" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+</Project>
