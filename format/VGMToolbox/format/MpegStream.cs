@@ -432,7 +432,7 @@ namespace VGMToolbox.format
                         catch (Exception _ex)
                         {
                             this.closeAllWriters(streamOutputWriters);
-                            throw new Exception(String.Format("在偏移量{0)处解析文件时出错, '{1}'", currentOffset.ToString("X8"), _ex.Message), _ex);
+                            throw new Exception(String.Format("在偏移量{0}处解析文件时出错, '{1}'", currentOffset.ToString("X8"), _ex.Message), _ex);
                         }
                     } // while (currentOffset < fileSize)
                 }
